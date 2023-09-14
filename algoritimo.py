@@ -4,7 +4,7 @@ from classe import *
 def main():
     while True:
         try:
-            os.system("cls")
+            limpar()
             print("Bem vindo a Loja do Cacique")
             print("[1] - Cadastro")
             print("[2] - Ver Produtos")
@@ -15,21 +15,21 @@ def main():
 
             match menu:
                 case 1:
-                    os.system("cls")
-                    os.system("pause")  
+                    limpar()
+                    pausar() 
 
                 case 2:
-                    os.system("cls")
-                    os.system("pause")
+                    limpar()
+                    pausar()
 
                 case 3:
-                    os.system("cls")
-                    os.system("pause")
+                    limpar()
+                    pausar()
 
                 case 4:
-                    os.system("cls")
+                    limpar()
                     print("Saindo...")
-                    os.system("pause")
+                    pausar()
                     break
 
         except Exception as erro:
