@@ -15,37 +15,50 @@ def main():
             match menu:
                 case 1:
                     limpar()
+                    print("--|Cadastrar Cliente|--")
+                    nome = input("Nome: ")
+                    senha = input("Senha: ")
+                    cliente = Cliente(nome, senha)
+                    cliente.add_Cliente(cliente)
+                    print("Cliente cadastrado com sucesso")
                     pausar()
 
                 case 2:
                     limpar()
-                    print("Area de fazer o login, o yuri faz depois")
-                    print("[1] - Ver Produtos")
-                    print("[2] - Adicionar ao Carrinho")
-                    print("[3] - Ver Carrinho")
-                    print("[4] - Voltar")
-                    menu2 = int(input(">>"))
+                    print("--|Login|--")
+                    nome = input("Nome: ")
+                    senha = input("Senha: ")
+                    cliente = Cliente(nome, senha)
+                    cliente.logar_Cliente()
+                    if cliente.logar_Cliente() == True:
+                        print("[1] - Ver Produtos")
+                        print("[2] - Adicionar ao Carrinho")
+                        print("[3] - Ver Carrinho")
+                        print("[4] - Voltar")
+                        menu2 = int(input(">>"))
 
-                    match menu2:
-                        case 1:
-                            limpar()
-                            pausar()
-                
-                        case 2:
-                            limpar()
-                            pausar()
+                        match menu2:
+                            case 1:
+                                limpar()
+                                pausar()
+                    
+                            case 2:
+                                limpar()
+                                pausar()
 
-                        case 3:
-                            limpar()
-                            pausar()
+                            case 3:
+                                limpar()
+                                pausar()
 
-                        case 4:
-                            limpar()
-                            print("Voltando...")
-                            pausar()
-                            main()
+                            case 4:
+                                limpar()
+                                print("Voltando...")
+                                pausar()
+                                main()
 
-                    pausar()
+                        pausar()
+                    else:
+                        print("Valor invalido")
 
                 case 3:
                     limpar()

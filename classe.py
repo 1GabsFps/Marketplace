@@ -62,7 +62,6 @@ class Cliente(Produtos, Carrinho_Compras):
         for cliente in self.clientes:
             if self.nome == cliente.getNome() and self.senha == cliente.getSenha():
                 print("Logado com sucesso")
-                pausar()
                 return True
             else:
                 print("Erro ao logar")
@@ -72,7 +71,6 @@ class Cliente(Produtos, Carrinho_Compras):
         for cliente in self.clientes:
             if self.nome == cliente.getNome() and self.senha == cliente.getSenha():
                 print("Deslogado com sucesso")
-                pausar()
                 return True
             else:
                 print("Erro ao deslogar")
