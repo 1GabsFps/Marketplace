@@ -41,3 +41,19 @@ class Clientes(Produto, Carrinho_Compras):
     def add_Cliente(self, cliente):
         self.cliente = cliente
         self.cliente.append(cliente)
+
+    def remover_cliente(self, vetor):
+        self.vetor = vetor - 1
+        self.clientes.pop(vetor)
+
+    def getNome(self):
+        return self.nome
+    
+    def getSenha(self):
+        return self.senha
+    
+    def setNome(self):
+        self.nome = nome
+
+    def setSenha(self):
+        self.senha = senha
