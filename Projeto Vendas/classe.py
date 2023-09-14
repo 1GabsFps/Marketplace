@@ -20,3 +20,24 @@ class Carrinho_Compras:
         self.vetor = vetor - 1
         self.add_Produtos.pop(vetor)
 
+class Produto:
+
+    def __init__(self, nome, preco):
+        self.nome = nome
+        self.preco = preco
+
+    def getNome(self):
+        return self.nome
+    
+    def getPreco(self):
+        return self.preco
+    
+class Clientes(Produto, Carrinho_Compras):
+    clientes = []
+    def __init__(self, nome, senha):
+        self.nome = nome
+        self.senha = senha
+
+    def add_Cliente(self, cliente):
+        self.cliente = cliente
+        self.cliente.append(cliente)
