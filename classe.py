@@ -67,4 +67,13 @@ class Cliente(Produtos, Carrinho_Compras):
             else:
                 print("Erro ao logar")
                 return False
-            
+    
+    def deslogar_Cliente(self):
+        for cliente in self.clientes:
+            if self.nome == cliente.getNome() and self.senha == cliente.getSenha():
+                print("Deslogado com sucesso")
+                pausar()
+                return True
+            else:
+                print("Erro ao deslogar")
+                return False

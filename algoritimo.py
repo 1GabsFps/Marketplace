@@ -1,5 +1,5 @@
 import os
-from classes import *
+from classe import *
 
 def main():
     while True:
