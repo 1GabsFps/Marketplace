@@ -15,7 +15,7 @@ def main():
             match menu:
                 case 1:
                     os.system("cls")
-                    os.system("pause")
+                    os.system("pause")  
 
                 case 2:
                     os.system("cls")
