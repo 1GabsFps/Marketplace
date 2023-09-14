@@ -8,8 +8,9 @@ def main():
             print("Bem vindo a Loja do Cacique")
             print("[1] - Cadastro")
             print("[2] - Ver Produtos")
-            print("[3] - Ver Carrinho")
-            print("[4] - Sair")
+            print("[3] - Adicionar ao Carrinho")
+            print("[4] - Ver Carrinho")
+            print("[5] - Sair")
             print("Digite o numero equivalente a opção que deseja")
             menu = int(input(">> "))
 
@@ -25,8 +26,13 @@ def main():
                 case 3:
                     limpar()
                     pausar()
-
+                    
                 case 4:
+                    limpar()
+                    pausar()
+
+
+                case 5:
                     limpar()
                     print("Saindo...")
                     pausar()
