@@ -1,5 +1,5 @@
 import os
-from classe import *
+from classes import *
 
 def main():
     while True:
@@ -8,10 +8,7 @@ def main():
             print("Bem vindo a Loja do Cacique")
             print("[1] - Cadastro")
             print("[2] - Login")
-            print("[3] - Ver Produtos")
-            print("[4] - Adicionar ao Carrinho")
-            print("[5] - Ver Carrinho")
-            print("[6] - Sair")
+            print("[3] - Sair")
             print("Digite o numero equivalente a opção que deseja")
             menu = int(input(">> "))
 
@@ -22,21 +19,35 @@ def main():
 
                 case 2:
                     limpar()
+                    print("Area de fazer o login, o yuri faz depois")
+                    print("[1] - Ver Produtos")
+                    print("[2] - Adicionar ao Carrinho")
+                    print("[3] - Ver Carrinho")
+                    print("[4] - Voltar")
+                    menu2 = int(input(">>"))
+
+                    match menu2:
+                        case 1:
+                            limpar()
+                            pausar()
+                
+                        case 2:
+                            limpar()
+                            pausar()
+
+                        case 3:
+                            limpar()
+                            pausar()
+
+                        case 4:
+                            limpar()
+                            print("Voltando...")
+                            pausar()
+                            main()
+
                     pausar()
 
                 case 3:
-                    limpar()
-                    pausar()
-                    
-                case 4:
-                    limpar()
-                    pausar()
-
-                case 5:
-                    limpar()
-                    pausar()
-
-                case 6:
                     limpar()
                     print("Saindo...")
                     pausar()
