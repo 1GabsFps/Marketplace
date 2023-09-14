@@ -5,11 +5,10 @@ def main():
     while True:
         try:
             os.system("cls")
-            print("Bem vindo")
-            print("[1] - ")
-            print("[2] - ")
-            print("[3] - ")
-            print("[4] - ")
+            print("Bem vindo a Loja do Cacique")
+            print("[1] - Ver Produtos")
+            print("[2] - Ver Carrinho")
+            print("[3] - Sair")
             print("Digite o numero equivalente a opção que deseja")
             menu = int(input(">> "))
 
@@ -19,13 +18,10 @@ def main():
                     os.system("pause")
 
                 case 2:
-                    pass
-
-                case 3:
                     os.system("cls")
                     os.system("pause")
 
-                case 4:
+                case 3:
                     os.system("cls")
                     print("Saindo...")
                     os.system("pause")
