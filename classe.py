@@ -28,4 +28,24 @@ class Produtos:
     def getValor(self):
         return self.valor
     
+class Cliente(Produtos, Carrinho_Compras):
+    clientes = []
+    def __init__(self, nome, senha):
+        self.nome = nome
+        self.senha = senha
 
+    def add_Cliente(self, cliente):
+        self.cliente = cliente
+        self.clientes.append(cliente)
+
+    def getNome(self):
+        return self.nome
+    
+    def getSenha(self):
+        return self.senha
+
+    def listar_Clientes(self):
+        self.cont = 0
+        for cliente in self.clientes:
+            self.cont += 1
+            print(f"Nome: {cliente.getNome()} - Senha: {cliente.getSenha()}")
