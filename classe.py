@@ -1,3 +1,11 @@
+import os 
+
+def limpar():
+    os.system("cls")
+
+def pausar():
+    os.system("pause")
+
 class Carrinho_Compras:
     lista_compra = []
     def add_produto(self, produto):
