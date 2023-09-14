@@ -16,7 +16,7 @@ def main():
             match menu:
                 case 1:
                     limpar()
-                    pausar() 
+                    pausar()
 
                 case 2:
                     limpar()
