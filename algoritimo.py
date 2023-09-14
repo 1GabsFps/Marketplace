@@ -7,10 +7,11 @@ def main():
             limpar()
             print("Bem vindo a Loja do Cacique")
             print("[1] - Cadastro")
-            print("[2] - Ver Produtos")
-            print("[3] - Adicionar ao Carrinho")
-            print("[4] - Ver Carrinho")
-            print("[5] - Sair")
+            print("[2] - Login")
+            print("[3] - Ver Produtos")
+            print("[4] - Adicionar ao Carrinho")
+            print("[5] - Ver Carrinho")
+            print("[6] - Sair")
             print("Digite o numero equivalente a opção que deseja")
             menu = int(input(">> "))
 
@@ -31,8 +32,11 @@ def main():
                     limpar()
                     pausar()
 
-
                 case 5:
+                    limpar()
+                    pausar()
+
+                case 6:
                     limpar()
                     print("Saindo...")
                     pausar()
