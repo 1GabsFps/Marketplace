@@ -57,3 +57,14 @@ class Cliente(Produtos, Carrinho_Compras):
         for cliente in self.clientes:
             self.cont += 1
             print(f"Nome: {cliente.getNome()} - Senha: {cliente.getSenha()}")
+
+    def logar_Cliente(self):
+        for cliente in self.clientes:
+            if self.nome == cliente.getNome() and self.senha == cliente.getSenha():
+                print("Logado com sucesso")
+                pausar()
+                return True
+            else:
+                print("Erro ao logar")
+                return False
+            
