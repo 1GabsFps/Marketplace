@@ -5,6 +5,7 @@ def main():
     while True:
         try:
             os.system("cls")
+            print("Bem vindo")
             print("[1] - ")
             print("[2] - ")
             print("[3] - ")
