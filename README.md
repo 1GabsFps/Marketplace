@@ -3,7 +3,8 @@
 
 ## Funcionalidades:
 ```
-### - Cadastro de Clientes
+### - Cadastro e Login de Clientes
 ### - Visualizar os Produtos
 ### - Adiciona-los ao Carrinho
+### - Remove-los do Carrinho
 ```
