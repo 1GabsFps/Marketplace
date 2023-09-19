@@ -29,12 +29,24 @@ class Produtos:
     def __init__(self, nome, valor):
         self.nome = nome
         self.valor = valor
+        self.produtos = []
+        self.preco = []
 
     def getNome(self):
         return self.nome
     
     def getValor(self):
         return self.valor
+    
+    def addProduto(self, produto, valor):
+        self.produto = produto
+        self.valor = valor
+        self.produtos.append(produto)
+        self.preco.append(valor)
+
+    def getProdutos(self):
+        return self.produtos
+
     
 class Cliente(Produtos, Carrinho_Compras):
     clientes = []
