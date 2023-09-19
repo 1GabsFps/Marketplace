@@ -31,34 +31,34 @@ def main():
                     cliente = Cliente(nome, senha)
                     cliente.logar_Cliente()
                     if cliente.logar_Cliente() == True:
-                        print("[1] - Ver Produtos")
-                        print("[2] - Adicionar ao Carrinho")
-                        print("[3] - Ver Carrinho")
-                        print("[4] - Voltar")
-                        menu2 = int(input(">>"))
+                        while  True:
+                            print("[1] - Ver Produtos")
+                            print("[2] - Adicionar ao Carrinho")
+                            print("[3] - Ver Carrinho")
+                            print("[4] - Voltar")
+                            menu2 = int(input(">>"))
 
-                        match menu2:
-                            case 1:
-                                limpar()
-                                pausar()
-                    
-                            case 2:
-                                limpar()
-                                pausar()
+                            match menu2:
+                                case 1:
+                                    limpar()
+                                    pausar()
+                        
+                                case 2:
+                                    limpar()
+                                    pausar()
 
-                            case 3:
-                                limpar()
-                                pausar()
+                                case 3:
+                                    limpar()
+                                    pausar()
 
-                            case 4:
-                                limpar()
-                                print("Voltando...")
-                                pausar()
-                                main()
-
-                        pausar()
+                                case 4:
+                                    limpar()
+                                    print("Voltando...")
+                                    pausar()
+                                    break
                     else:
                         print("Valor invalido")
+                        pausar()
 
                 case 3:
                     limpar()
@@ -69,4 +69,4 @@ def main():
         except Exception as erro:
             print("Valor invalido")
             print(erro.__class__.__name__)
-    
+            pausar()
