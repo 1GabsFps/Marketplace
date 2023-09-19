@@ -3,6 +3,9 @@ from classe import *
 
 def main():
     while True:
+        cliente = Cliente("adm", "adm")
+        cliente.add_Cliente(cliente)
+
         try:
             limpar()
             print("Bem vindo a Loja do Cacique")
