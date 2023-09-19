@@ -37,25 +37,25 @@ def main():
                             print("[3] - Ver Carrinho")
                             print("[4] - Voltar")
                             menu2 = int(input(">>"))
-
                             match menu2:
-                                case 1:
-                                    limpar()
-                                    pausar()
-                        
-                                case 2:
-                                    limpar()
-                                    pausar()
-
-                                case 3:
-                                    limpar()
-                                    pausar()
-
                                 case 4:
                                     limpar()
                                     print("Voltando...")
                                     pausar()
                                     break
+                            while True:
+                                match menu2:
+                                    case 1:
+                                        limpar()
+                                        pausar()
+                            
+                                    case 2:
+                                        limpar()
+                                        pausar()
+
+                                    case 3:
+                                        limpar()
+                                        pausar()
                     else:
                         print("Valor invalido")
                         pausar()
