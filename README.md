@@ -1,7 +1,19 @@
 # MarketPlace
-<img src="https://img.shields.io/static/v1?label=STATUS&message=%20EM DESENVOLVIMENTO&color=blue&style=for-the-badge&logo=REACT"/>
 
-# Especificações do Software de Compra e Venda em Python Orientado a Objeto
+<table>
+<tr>
+    <td align="center">
+        <a href="vscode://open?url=https://github.com/diegorkkj/marketplace">
+        <img src="https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg" alt="Open in Visual Studio Code">
+        </a>
+    </td>
+    <td align="center">
+        <img src="https://img.shields.io/static/v1?label=STATUS&message=%20EM DESENVOLVIMENTO&color=blue&style=for-the-badge&logo=REACT"/>
+    </td>
+</tr>
+</table>
+
+## Especificações do Software de Compra e Venda em Python Orientado a Objeto
 
 O software foi projetado com o objetivo de oferecer um ambiente de E-Comercy eletrônico onde clientes podem se cadastrar, fazer login, visualizar produtos, adicionar itens ao carrinho e realizar compras. Além disso, há funcionalidades específicas para administradores, como gerenciar clientes, produtos e perfis de administrador.
 Ele devera ser feito base nos fundamentos de `associação, agregação e composição` em Python Orientado a Objeto
@@ -14,7 +26,7 @@ Ele devera ser feito base nos fundamentos de `associação, agregação e compos
 
 - **Sair**: Essa função permite que o usuário saia do software, encerrando a sessão e fechando o programa.
 
-*Observação*: O perfil do administrador já estará previamente definido no sistema, permitindo o acesso com as informações de login cadastradas previamente.
+_Observação_: O perfil do administrador já estará previamente definido no sistema, permitindo o acesso com as informações de login cadastradas previamente.
 
 ## Tela de Login do Cliente
 
@@ -46,5 +58,53 @@ Ele devera ser feito base nos fundamentos de `associação, agregação e compos
 
 - **Voltar**: Permite ao administrador retornar à tela inicial, efetuando o logout do perfil de administrador atual.
 
-Este documento descreve as funcionalidades principais do software de compra e venda em Python Orientado a Objeto. 
+Este documento descreve as funcionalidades principais do software de compra e venda em Python Orientado a Objeto.
 
+## Autores
+
+<div align="center">
+    <table>
+    <tr>
+        <td align="center" >
+        <a href="https://github.com/Projectyuuri07">
+            <img src="https://avatars.githubusercontent.com/Projectyuuri07" width="115px;" alt="Foto_Yuri"/><br>
+            <sub>
+            <b>Yuri Azevedo</b>
+            </sub>
+        </a>
+        </td>
+        <td align="center">
+        <a href="https://github.com/vitrolaaotn">
+            <img src="https://avatars.githubusercontent.com/vitrolaaotn" width="115px;" alt="Foto_Alexandre"/><br>
+            <sub>
+            <b>Alexandre</b>
+            </sub>
+        </a>
+        </td>
+        <td align="center">
+        <a href="https://github.com/1GabsFps">
+            <img src="https://avatars.githubusercontent.com/1GabsFps" width="115px;" alt="Foto_Gabriel_Neco"/><br>
+            <sub>
+            <b>Gabriel Neco</b>
+            </sub>
+        </a>
+        </td>
+        <td align="center">
+        <a href="https://github.com/DzinnnXn">
+            <img src="https://avatars.githubusercontent.com/DzinnnXn" width="115px;" alt="Foto_André_Felipe"/><br>
+            <sub>
+            <b>André Felipe</b>
+            </sub>
+        </a>
+        </td>
+        <td align="center">
+        <a href="https://github.com/diegorkkj">
+            <img src="https://avatars.githubusercontent.com/diegorkkj" width="115px;" alt="Foto_Diego"/><br>
+            <sub>
+            <b>Diego</b>
+            </sub>
+        </a>
+        </td>
+    </tr>
+    </table>
+</div>
