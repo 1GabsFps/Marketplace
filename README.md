@@ -1,4 +1,5 @@
 # MarketPlace
+<img src="https://img.shields.io/static/v1?label=STATUS&message=%20EM DESENVOLVIMENTO&color=blue&style=for-the-badge&logo=REACT"/>
 
 # Especificações do Software de Compra e Venda em Python Orientado a Objeto
 
@@ -45,5 +46,5 @@ Ele devera ser feito base nos fundamentos de `associação, agregação e compos
 
 - **Voltar**: Permite ao administrador retornar à tela inicial, efetuando o logout do perfil de administrador atual.
 
-Este documento descreve as funcionalidades principais do software de compra e venda em Python Orientado a Objeto. Certifique-se de manter a documentação atualizada à medida que novas funcionalidades forem adicionadas ou alterações forem feitas no software.
+Este documento descreve as funcionalidades principais do software de compra e venda em Python Orientado a Objeto. 
 
