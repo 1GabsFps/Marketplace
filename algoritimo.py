@@ -107,7 +107,7 @@ def main():
             match menu:
                 case 1:
                     limpar()
-                    print("Login")
+                    print("--| Login |--")
                     nome = input("Nome: ")
                     senha = input("Senha: ")
                     if adm.verifyAdm(nome, senha) == True:
@@ -117,20 +117,20 @@ def main():
                             match opcao:
                                 case 1:
                                     limpar()
-                                    print("Cadastrar Cliente")
+                                    print("--| Cadastrar Cliente |--")
                                     nome = input("Nome: ")
                                     senha = input("Senha: ")
                                     cliente.add_Cliente(nome, senha)
                                 case 2:
                                     limpar()
-                                    print("Cadastrar Adm")
+                                    print("--| Cadastrar Adm |--")
                                     nome = input("Nome: ")
                                     senha = input("Senha: ")
                                     adm.cadAdm(nome, senha)
                                     print("Adm cadastrado com sucesso")
                                 case 3:
                                     limpar()
-                                    print("Adicionar Produto")
+                                    print("--| Adicionar Produto |--")
                                     nome = input("Nome do produto: ")
                                     valor = float(input("Valor do produto: "))
                                     descricao = input("Descrição do produto: ")
@@ -140,52 +140,38 @@ def main():
 
                                 case 4:
                                     limpar()
-                                    print("Remover Produto")
+                                    print("--| Remover Produto |--")
                                     produtos.ListarProdutos()
-                                    produtoRem = int(
-                                        input(
-                                            "Digite o numero do produto que deseja remover: "
-                                        )
-                                    )
+                                    produtoRem = int(input("Digite o numero do produto que deseja remover: "))
                                     produtos.RemProdutos(produtoRem)
                                 case 5:
                                     limpar()
-                                    print("Remover Cliente")
+                                    print("--| Remover Cliente |--")
                                     cliente.listar_Clientes()
-                                    clienterem = int(
-                                        (
-                                            input(
-                                                "Digite o numero do cliente que deseja remover: "
-                                            )
-                                        )
-                                    )
+                                    clienterem = int((input("Digite o numero do cliente que deseja remover: ")))
                                     adm.DelCliente(clienterem)
 
                                 case 6:
                                     limpar()
-                                    print("Remover Adm")
+                                    print("--| Remover Adm |--")
                                     adm.listarAdm
-                                    admrem = int(
-                                        input(
-                                            "Digite o numero do adm que deseja remover: "
-                                        )
-                                    )
+                                    admrem = int(input("Digite o numero do adm que deseja remover: "))
                                     adm.delAdm(admrem)
                                     print("Adm removido com sucesso")
                                     pausar()
                                 case 7:
                                     limpar()
-                                    print("Listar Produtos")
+                                    print("--| Listar Produtos |--")
                                     produtos.ListarProdutos()
                                     pausar()
                                 case 8:
                                     limpar()
-                                    print("Listar Clientes")
+                                    print("--| Listar Clientes |--")
                                     cliente.listar_Clientes()
                                     pausar()
                                 case 9:
                                     limpar()
-                                    print("Listar Adms")
+                                    print("--| Listar Adms |--")
                                     adm.listarAdm()
                                     pausar()
 
@@ -199,36 +185,27 @@ def main():
                             match opcCliente:
                                 case 1:
                                     limpar()
-                                    print("Produtos")
+                                    print("--| Produtos |--")
                                     produtos.ListarProdutos()
                                     pausar()
                                 case 2:
                                     limpar()
-                                    print("Adicionar ao Carrinho")
-                                    print("Produtos")
+                                    print("--| Adicionar Produtos ao Carrinho |--")
                                     produtos.ListarProdutos()
-                                    produto = int(
-                                        input(
-                                            "Digite o numero do produto que deseja adicionar ao carrinho: "
-                                        )
-                                    )
+                                    produto = int(input("Digite o numero do produto que deseja adicionar ao carrinho: "))
                                     cliente.AddCarrinho(produto)
                                     print("Produto adicionado ao carrinho com sucesso")
                                     pausar()
                                 case 3:
                                     limpar()
-                                    print("Ver Carrinho")
+                                    print("--| Ver Carrinho |--")
                                     cliente.ListCarrinho()
                                     pausar()
                                 case 4:
                                     limpar()
-                                    print("Excluir do Carrinho")
+                                    print("--| Excluir do Carrinho |--")
                                     cliente.ListCarrinho()
-                                    produto = int(
-                                        input(
-                                            "Digite o numero do produto que deseja remover do carrinho: "
-                                        )
-                                    )
+                                    produto = int(input("Digite o numero do produto que deseja remover do carrinho: "))
                                     cliente.RemCarrinho(produto)
                                     print("Produto removido do carrinho com sucesso")
                                     pausar()

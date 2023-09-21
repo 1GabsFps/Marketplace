@@ -41,7 +41,7 @@ class Produtos:
         i = 0
         for i in range(len(self.produtos)):
             print(
-                f" Produto: {self.produtos.index(self.produtos[i])} ----Nome: {self.produtos[i]} -----Desc: {self.descs[i]}----Valor: {self.preco[i]}"
+                f" Produto: {self.produtos.index(self.produtos[i])}  |  Nome: {self.produtos[i]}  |  Desc: {self.descs[i]}  |  Valor: {self.preco[i]}"
             )
             i += 1
 
@@ -71,7 +71,7 @@ class Adm:
     def listarAdm(self):
         i = 0
         for i in range(len(self.adms)):
-            print(f" Index: {i} Nome: {self.adms[i]} - Senha: {self.admsSenha[i]}")
+            print(f" Index: {i}  |  Nome: {self.adms[i]}  |  Senha: {self.admsSenha[i]}")
             i += 1
 
     def delAdm(self, adm):
@@ -105,7 +105,7 @@ class Cliente(Produtos):
         self.cont = 0
         for cliente in self.clientes:
             self.cont += 1
-            print(f"Nome: {cliente.getNome()} - Senha: {cliente.getSenha()}")
+            print(f"Nome: {cliente.getNome()}  |  Senha: {cliente.getSenha()}")
 
     def logar_Cliente(self, nome, senha):
         if nome in self.clientes and senha in self.clienteSenha:
@@ -133,7 +133,7 @@ class Cliente(Produtos):
         for i in self.listacarrinho:
             self.cont += 1
             print(
-                f"Nome: {self.listacarrinho[self.cont]} - Valor: {self.listacarrinhopreço[self.cont]}"
+                f"Nome: {self.listacarrinho[self.cont]}  |  Valor: {self.listacarrinhopreço[self.cont]}"
             )
 
     def RemCarrinho(self, vetor):
