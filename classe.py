@@ -9,35 +9,24 @@ def pausar():
     os.system("pause")
 
 
-class Carrinho_Compras:
-    lista_compra = []
-
-    def AddCarrinho(self, produto):
-        self.produto = produto
-        self.lista_compra.append(produto)
-
-    def ListCarrinho(self):
-        self.cont = 0
-        for produto in self.lista_compra:
-            self.cont += 1
-            print(f"Nome: {produto.getNome()} - Valor: {produto.getValor()}")
-
-    def getLista(self, vetor):
-        return self.lista_compra(vetor)
-
-    def RemCarrinho(self, vetor):
-        self.vetor = vetor - 1
-        self.lista_compra.pop(vetor)
+class Loja:
+    def __init__(self, nome, endereço, cnpj):
+        self.nome = nome
+        self.endereço = endereço
+        self.cnpj = cnpj
 
 
 class Produtos:
-    def AddProduto(self, nome, valor):
+    def AddProduto(self, nome, desc, valor):
         self.nome = nome
         self.valor = valor
+        self.desc = desc
+        self.descs = []
         self.produtos = []
         self.preco = []
         self.produtos.append(nome)
         self.preco.append(valor)
+        self.descs.append(desc)
 
     def getNome(self):
         return self.nome
@@ -52,17 +41,58 @@ class Produtos:
         i = 0
         for i in range(len(self.produtos)):
             print(
-                f" Produto: {self.produtos.index(self.produtos[i])} ----Nome: {self.produtos[i]} ----Valor: {self.preco[i]}"
+                f" Produto: {self.produtos.index(self.produtos[i])} ----Nome: {self.produtos[i]} -----Desc: {self.descs[i]}----Valor: {self.preco[i]}"
             )
             i += 1
 
     def RemProdutos(self, produto):
-        self.produto = produto
         del self.produtos[produto]
         del self.preco[produto]
+        del self.descs[produto]
 
 
-class Cliente(Produtos, Carrinho_Compras):
+class Adm:
+    def cadAdm(self, nome, senha):
+        self.adms = [
+            "root",
+        ]
+        self.adms.append(nome)
+        self.admsSenha = [
+            "root",
+        ]
+        self.admsSenha.append(senha)
+
+    def verifyAdm(self, nome, senha):
+        if nome in self.adms and senha in self.admsSenha:
+            return True
+        else:
+            return False
+
+    def listarAdm(self):
+        i = 0
+        for i in range(len(self.adms)):
+            print(f" Index: {i} Nome: {self.adms[i]} - Senha: {self.admsSenha[i]}")
+            i += 1
+
+    def delAdm(self, adm):
+        if adm == 0:
+            print("Não é possivel remover o adm root")
+        else:
+            del self.admsSenha[adm]
+            del self.adms[adm]
+        if adm >= len(self.adms):
+            print("Não existe esse adm")
+
+    def DelCliente(self, cliente):
+        del self.clientes[cliente]
+        del self.clienteSenha[cliente]
+        if cliente >= len(self.clientes):
+            print("Não existe esse cliente")
+        else:
+            print("Cliente removido com sucesso")
+
+
+class Cliente(Produtos):
     def add_Cliente(self, nome, senha):
         self.nome = nome
         self.senha = senha
@@ -71,26 +101,17 @@ class Cliente(Produtos, Carrinho_Compras):
         self.clientes.append(nome)
         self.clienteSenha.append(senha)
 
-    def getNome(self):
-        return self.nome
-
-    def getSenha(self):
-        return self.senha
-
     def listar_Clientes(self):
         self.cont = 0
         for cliente in self.clientes:
             self.cont += 1
             print(f"Nome: {cliente.getNome()} - Senha: {cliente.getSenha()}")
 
-    def logar_Cliente(self):
-        for cliente in self.clientes:
-            if self.nome == cliente.getNome() and self.senha == cliente.getSenha():
-                print("Logado com sucesso")
-                return True
-            else:
-                print("Erro ao logar")
-                return False
+    def logar_Cliente(self, nome, senha):
+        if nome in self.clientes and senha in self.clienteSenha:
+            return True
+        else:
+            return False
 
     def deslogar_Cliente(self):
         for cliente in self.clientes:
@@ -101,37 +122,20 @@ class Cliente(Produtos, Carrinho_Compras):
                 print("Erro ao deslogar")
                 return False
 
+    def AddCarrinho(self, produto):
+        self.listacarrinho = []
+        self.listacarrinho.append(self.produtos[produto])
+        self.listacarrinhopreço = []
+        self.listacarrinhopreço.append(self.preco[produto])
 
-class Adm:
-    def __init__(self, user, senha):
-        self.user = user
-        self.senha = senha
+    def ListCarrinho(self):
+        self.cont = 0
+        for i in self.listacarrinho:
+            self.cont += 1
+            print(
+                f"Nome: {self.listacarrinho[self.cont]} - Valor: {self.listacarrinhopreço[self.cont]}"
+            )
 
-    def cadCliente(self, cliente):
-        pass
-
-    def cadProduto(self, produto):
-        pass
-
-    def cadAdm(self, nome, senha):
-        self.adms = []
-        self.adms.append(nome)
-        self.admsSenha = []
-        self.admsSenha.append(senha)
-
-    def verifyAdm(self, nome, senha):
-        for i in range(len(self.adms)):
-            if nome == self.adms[i] and senha == self.admsSenha[i]:
-                return True
-            else:
-                return False
-
-    def listarAdm(self):
-        i = 0
-        for i in range(len(self.adms)):
-            print(f" Index: {i} Nome: {self.adms[i]} - Senha: {self.admsSenha[i]}")
-            i += 1
-
-    def delAdm(self, adm):
-        del self.adms[adm]
-        del self.admsSenha[adm]
+    def RemCarrinho(self, vetor):
+        del self.listacarrinho[vetor]
+        del self.listacarrinhopreço[vetor]

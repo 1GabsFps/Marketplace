@@ -1,8 +1,9 @@
-from Classe import *
+from classe import *
 
 produtos = Produtos()
+adm = Adm()
 cliente = Cliente()
-adm = Adm("root", "root")
+loja = Loja("LOJA DO CACIQUE", "Ácre", "11091945")
 
 
 def voltar():
@@ -14,7 +15,7 @@ def voltar():
 # --|Função dos menus|--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 def menucliente():
     limpar()
-    print("---| BEM VINDO A LOJA DO CACIQUE |---")
+    print(f"---| BEM VINDO A {loja.nome} |---")
     print(" [1] - Ver Produtos")
     print(" [2] - Adicionar ao Carrinho")
     print(" [3] - Ver Carrinho")
@@ -39,7 +40,7 @@ def menuadm():
 
 def menuprincipal():
     limpar()
-    print("---| BEM VINDO A LOJA DO CACIQUE |---")
+    print(f"---| BEM VINDO A {loja.nome} |---")
     print(" [1] - Login")
     print(" [2] - Sair")
     print("Digite o numero equivalente a opção que deseja")
@@ -96,43 +97,152 @@ def verCarrinho():
 
 
 def main():
+    adm.cadAdm("root", "root")
     while True:
-        limpar()
-        menuprincipal()
-        menu = int(input(">> "))
+        try:
+            limpar()
+            menuprincipal()
+            menu = int(input(">> "))
 
-        match menu:
-            case 1:
-                limpar()
-                print("Login")
-                nome = input("Nome: ")
-                senha = input("Senha: ")
-                if adm.verifyAdm(nome, senha) == True:
-                    while True:
-                        menuadm()
-                        opcao = int(input(">> "))
-                        match opcao:
-                            case 1:
-                                limpar()
-                                print("Cadastrar Cliente")
-                                nome = input("Nome: ")
-                                senha = input("Senha: ")
-                                cliente.add_Cliente(nome, senha)
-                            case 2:
-                                limpar()
-                                print("Cadastrar Adm")
-                                nome = input("Nome: ")
-                                senha = input("Senha: ")
+            match menu:
+                case 1:
+                    limpar()
+                    print("Login")
+                    nome = input("Nome: ")
+                    senha = input("Senha: ")
+                    if adm.verifyAdm(nome, senha) == True:
+                        while True:
+                            menuadm()
+                            opcao = int(input(">> "))
+                            match opcao:
+                                case 1:
+                                    limpar()
+                                    print("Cadastrar Cliente")
+                                    nome = input("Nome: ")
+                                    senha = input("Senha: ")
+                                    cliente.add_Cliente(nome, senha)
+                                case 2:
+                                    limpar()
+                                    print("Cadastrar Adm")
+                                    nome = input("Nome: ")
+                                    senha = input("Senha: ")
+                                    adm.cadAdm(nome, senha)
+                                    print("Adm cadastrado com sucesso")
+                                case 3:
+                                    limpar()
+                                    print("Adicionar Produto")
+                                    nome = input("Nome do produto: ")
+                                    valor = float(input("Valor do produto: "))
+                                    descricao = input("Descrição do produto: ")
+                                    produtos.AddProduto(nome, descricao, valor)
+                                    print("Produto adicionado com sucesso")
+                                    pausar()
 
-                elif cliente.logar_Cliente() == True:
-                    while True:
-                        menucliente()
-                else:
-                    print("Login invalido")
+                                case 4:
+                                    limpar()
+                                    print("Remover Produto")
+                                    produtos.ListarProdutos()
+                                    produtoRem = int(
+                                        input(
+                                            "Digite o numero do produto que deseja remover: "
+                                        )
+                                    )
+                                    produtos.RemProdutos(produtoRem)
+                                case 5:
+                                    limpar()
+                                    print("Remover Cliente")
+                                    cliente.listar_Clientes()
+                                    clienterem = int(
+                                        (
+                                            input(
+                                                "Digite o numero do cliente que deseja remover: "
+                                            )
+                                        )
+                                    )
+                                    adm.DelCliente(clienterem)
+
+                                case 6:
+                                    limpar()
+                                    print("Remover Adm")
+                                    adm.listarAdm
+                                    admrem = int(
+                                        input(
+                                            "Digite o numero do adm que deseja remover: "
+                                        )
+                                    )
+                                    adm.delAdm(admrem)
+                                    print("Adm removido com sucesso")
+                                    pausar()
+                                case 7:
+                                    limpar()
+                                    print("Listar Produtos")
+                                    produtos.ListarProdutos()
+                                    pausar()
+                                case 8:
+                                    limpar()
+                                    print("Listar Clientes")
+                                    cliente.listar_Clientes()
+                                    pausar()
+                                case 9:
+                                    limpar()
+                                    print("Listar Adms")
+                                    adm.listarAdm()
+                                    pausar()
+
+                                case 10:
+                                    voltar()
+                                    break
+                    elif cliente.logar_Cliente(nome, senha) == True:
+                        while True:
+                            menucliente()
+                            opcCliente = int(input(">> "))
+                            match opcCliente:
+                                case 1:
+                                    limpar()
+                                    print("Produtos")
+                                    produtos.ListarProdutos()
+                                    pausar()
+                                case 2:
+                                    limpar()
+                                    print("Adicionar ao Carrinho")
+                                    print("Produtos")
+                                    produtos.ListarProdutos()
+                                    produto = int(
+                                        input(
+                                            "Digite o numero do produto que deseja adicionar ao carrinho: "
+                                        )
+                                    )
+                                    cliente.AddCarrinho(produto)
+                                    print("Produto adicionado ao carrinho com sucesso")
+                                    pausar()
+                                case 3:
+                                    limpar()
+                                    print("Ver Carrinho")
+                                    cliente.ListCarrinho()
+                                    pausar()
+                                case 4:
+                                    limpar()
+                                    print("Excluir do Carrinho")
+                                    cliente.ListCarrinho()
+                                    produto = int(
+                                        input(
+                                            "Digite o numero do produto que deseja remover do carrinho: "
+                                        )
+                                    )
+                                    cliente.RemCarrinho(produto)
+                                    print("Produto removido do carrinho com sucesso")
+                                    pausar()
+                                case 5:
+                                    voltar()
+                                    break
+
+                    else:
+                        print("Nome ou senha incorretos")
+                        pausar()
+                case 2:
+                    limpar()
+                    print("Saindo....")
                     pausar()
-                    limpar
-            case 2:
-                limpar()
-                print("Saindo....")
-                pausar()
-                exit()
+                    exit()
+        except Exception as e:
+            print("erro")
