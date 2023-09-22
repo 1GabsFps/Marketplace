@@ -19,13 +19,14 @@ class Loja:
 
 
 class Produtos:
+    def __init__(self)
+        self.produtos = []
+        self.descs =[]
+        self.preco =[]
     def AddProduto(self, nome, desc, valor):
         self.nome = nome
         self.valor = valor
         self.desc = desc
-        self.descs = []
-        self.produtos = []
-        self.preco = []
         self.produtos.append(nome)
         self.preco.append(valor)
         self.descs.append(desc)
