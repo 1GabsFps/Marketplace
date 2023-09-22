@@ -4,7 +4,15 @@ produtos = Produtos()
 adm = Adm()
 cliente = Cliente()
 loja = Loja("LOJA DO CACIQUE", "Ácre", "11091945")
+checkout = Checkout()
 
+def gerar_parte_aleatoria(length):
+    caracteres = string.ascii_uppercase + string.digits
+    return ''.join(random.choice(caracteres) for _ in range(length))
+
+def gerar_numero_pedido():
+    numero_pedido = f"#{gerar_parte_aleatoria(2)}{gerar_parte_aleatoria(2)}{gerar_parte_aleatoria(2)}{gerar_parte_aleatoria(2)}{gerar_parte_aleatoria(3)}"
+    return numero_pedido
 
 def voltar():
     limpar()
@@ -21,6 +29,8 @@ def menucliente():
     print(" [3] - Ver Carrinho")
     print(" [4] - Excluir do Carrinho")
     print(" [5] - Voltar")
+    print(" [6] - Checkout")
+    print(" [7] - Pagar")
 
 
 def menuadm():
@@ -75,22 +85,8 @@ def removerProdutos():
     pausar()
 
 
-def addCarrinho():
-    limpar()
-    print("Adicionando ao Carrinho")
-    print("Produtos")
-    print(f"Nome: {Produtos.getNome()} - Valor: {Produtos.getValor()}")
-    produto = input("Digite o nome do produto que deseja adicionar ao carrinho: ")
-    produto.addCarrinho(Produtos)
-    print("Produto adicionado ao carrinho com sucesso")
-    pausar()
 
 
-def verCarrinho():
-    limpar()
-    print("Carrinho")
-    print(f"Nome: {Produtos.getNome()} - Valor: {Produtos.getValor()}")
-    pausar()
 
 
 # /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -99,7 +95,6 @@ def verCarrinho():
 def main():
     adm.cadAdm("root", "root")
     while True:
-        try:
             limpar()
             menuprincipal()
             menu = int(input(">> "))
@@ -193,24 +188,37 @@ def main():
                                     print("--| Adicionar Produtos ao Carrinho |--")
                                     produtos.ListarProdutos()
                                     produto = int(input("Digite o numero do produto que deseja adicionar ao carrinho: "))
-                                    cliente.AddCarrinho(produto)
-                                    print("Produto adicionado ao carrinho com sucesso")
+                                    produtos.AddCarrinho(produto)
                                     pausar()
                                 case 3:
                                     limpar()
                                     print("--| Ver Carrinho |--")
-                                    cliente.ListCarrinho()
+                                    produtos.ListCarrinho()
                                     pausar()
                                 case 4:
                                     limpar()
                                     print("--| Excluir do Carrinho |--")
-                                    cliente.ListCarrinho()
+                                    produtos.ListCarrinho()
                                     produto = int(input("Digite o numero do produto que deseja remover do carrinho: "))
-                                    cliente.RemCarrinho(produto)
-                                    print("Produto removido do carrinho com sucesso")
+                                    produtos.RemCarrinho(produto)
                                     pausar()
                                 case 5:
                                     voltar()
+                                    break
+                                case 6:
+                                    limpar()
+                                    print("--| Checkout |--")
+                                    produtos.ListCarrinho()
+                                    checkout.SomaCarrinho()
+                                    pausar()
+                                case 7:
+                                    limpar()
+                                    print("--| Pagar |--")
+                                    print("Pagamento efetuado com sucesso")
+                                    numero_pedido = gerar_numero_pedido()
+                                    print(f"Numero do pedido: {numero_pedido}")
+                                    checkout.HistoricoCompra(numero_pedido)
+                                    pausar()
                                     break
 
                     else:
@@ -221,5 +229,3 @@ def main():
                     print("Saindo....")
                     pausar()
                     exit()
-        except Exception as e:
-            print("erro")

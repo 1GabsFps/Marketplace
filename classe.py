@@ -1,4 +1,6 @@
 import os
+import random
+import string
 
 
 def limpar():
@@ -28,14 +30,6 @@ class Produtos:
         self.preco.append(valor)
         self.descs.append(desc)
 
-    def getNome(self):
-        return self.nome
-
-    def getValor(self):
-        return self.valor
-
-    def getProdutos(self):
-        return self.produtos
 
     def ListarProdutos(self):
         i = 0
@@ -50,6 +44,26 @@ class Produtos:
         del self.preco[produto]
         del self.descs[produto]
 
+    def AddCarrinho(self, produto):
+        self.listacarrinho = []
+        self.listacarrinho.append(self.produtos[produto])
+        self.listacarrinhopreço = []
+        self.listacarrinhopreço.append(self.preco[produto])
+        print("Produto adicionado com sucesso")
+    
+    def ListCarrinho(self):
+        self.cont = 0
+        for i in self.listacarrinho:
+            print(f"Nome: {self.listacarrinho[self.cont]}  |  Valor: {self.listacarrinhopreço[self.cont]}")
+            self.cont += 1
+
+    def RemCarrinho(self, vetor):
+        del self.listacarrinho[vetor]
+        del self.listacarrinhopreço[vetor]
+        if vetor >= len(self.listacarrinho):
+            print("Não existe esse produto")
+        else:
+            print("Produto removido com sucesso")
 
 class Adm:
     def cadAdm(self, nome, senha):
@@ -113,29 +127,20 @@ class Cliente(Produtos):
         else:
             return False
 
-    def deslogar_Cliente(self):
-        for cliente in self.clientes:
-            if self.nome == cliente.getNome() and self.senha == cliente.getSenha():
-                print("Deslogado com sucesso")
-                return True
-            else:
-                print("Erro ao deslogar")
-                return False
 
-    def AddCarrinho(self, produto):
-        self.listacarrinho = []
-        self.listacarrinho.append(self.produtos[produto])
-        self.listacarrinhopreço = []
-        self.listacarrinhopreço.append(self.preco[produto])
 
-    def ListCarrinho(self):
-        self.cont = 0
-        for i in self.listacarrinho:
-            self.cont += 1
-            print(
-                f"Nome: {self.listacarrinho[self.cont]}  |  Valor: {self.listacarrinhopreço[self.cont]}"
-            )
-
-    def RemCarrinho(self, vetor):
-        del self.listacarrinho[vetor]
-        del self.listacarrinhopreço[vetor]
+class Checkout(Produtos):
+    def SomaCarrinho(self):
+        for i in range(len(self.listacarrinhopreço)):
+            self.soma = 0
+            self.soma += self.listacarrinhopreço[i]
+        print(f"Valor total do carrinho: {self.soma}")
+    def HistoricoCompra(self, Npedido):
+        self.historicoNome = []
+        self.historicoNome.append(self.nome)
+        self.historicoProduto = []
+        self.historicoProduto.append(self.listacarrinho)
+        self.historicoValor = []
+        self.historicoValor.append(self.soma)
+        self.historicoNpedido = []
+        self.historicoNpedido.append(Npedido)
