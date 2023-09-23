@@ -28,9 +28,9 @@ def menucliente():
     print(" [2] - Adicionar ao Carrinho")
     print(" [3] - Ver Carrinho")
     print(" [4] - Excluir do Carrinho")
-    print(" [5] - Voltar")
-    print(" [6] - Checkout")
-    print(" [7] - Pagar")
+    print(" [5] - Checkout")
+    print(" [6] - Pagar")
+    print(" [7] - Voltar")
 
 
 def menuadm():
@@ -44,8 +44,10 @@ def menuadm():
     print(" [6] - Remover Adm")
     print(" [7] - Listar Produto")
     print(" [8] - Listar Clientes")
-    print(" [9] - Litar Adms")
-    print(" [10] - Voltar")
+    print(" [9] - Listar Adms")
+    print(" [10] - Historico de Compras")
+    print(" [11] - Historico Geral")
+    print(" [12] - Voltar")
 
 
 def menuprincipal():
@@ -171,6 +173,16 @@ def main():
                                     pausar()
 
                                 case 10:
+                                    limpar()
+                                    print("--| Historico De Compras |--")
+                                    checkout.ListarHistorico()
+                                    pausar()
+                                case 11:
+                                    limpar()
+                                    print("--| Historico Geral |--")
+                                    checkout.TotalHistorico()
+                                    pausar()
+                                case 12:
                                     voltar()
                                     break
                     elif cliente.logar_Cliente(nome, senha) == True:
@@ -203,22 +215,20 @@ def main():
                                     produtos.RemCarrinho(produto)
                                     pausar()
                                 case 5:
-                                    voltar()
-                                    break
-                                case 6:
                                     limpar()
                                     print("--| Checkout |--")
                                     produtos.ListCarrinho()
-                                    checkout.SomaCarrinho()
+                                    produtos.SomaCarrinho()
                                     pausar()
-                                case 7:
+                                case 6:
                                     limpar()
                                     print("--| Pagar |--")
                                     print("Pagamento efetuado com sucesso")
                                     numero_pedido = gerar_numero_pedido()
                                     print(f"Numero do pedido: {numero_pedido}")
                                     checkout.HistoricoCompra(numero_pedido)
-                                    pausar()
+                                case 7:
+                                    voltar()
                                     break
 
                     else:
