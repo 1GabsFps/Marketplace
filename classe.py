@@ -95,11 +95,9 @@ class Produtos:
 class Adm:
     def cadAdm(self, nome, senha):
         self.adms = [
-            "root",
         ]
         self.adms.append(nome)
         self.admsSenha = [
-            "root",
         ]
         self.admsSenha.append(senha)
 
