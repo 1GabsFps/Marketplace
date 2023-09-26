@@ -137,32 +137,20 @@ def main():
                                 limpar()
                                 print("--| Remover Produto |--")
                                 produtos.ListarProdutos()
-                                produtoRem = int(
-                                    input(
-                                        "Digite o numero do produto que deseja remover: "
-                                    )
-                                )
+                                produtoRem = int(input("Digite o numero do produto que deseja remover: "))
                                 produtos.RemProdutos(produtoRem)
                             case 5:
                                 limpar()
                                 print("--| Remover Cliente |--")
                                 cliente.listar_Clientes()
-                                clienterem = int(
-                                    (
-                                        input(
-                                            "Digite o numero do cliente que deseja remover: "
-                                        )
-                                    )
-                                )
+                                clienterem = int((input("Digite o numero do cliente que deseja remover: ")))
                                 adm.DelCliente(clienterem)
 
                             case 6:
                                 limpar()
                                 print("--| Remover Adm |--")
                                 adm.listarAdm
-                                admrem = int(
-                                    input("Digite o numero do adm que deseja remover: ")
-                                )
+                                admrem = int(input("Digite o numero do adm que deseja remover: "))
                                 adm.delAdm(admrem)
                                 print("Adm removido com sucesso")
                                 pausar()
@@ -209,11 +197,7 @@ def main():
                                 limpar()
                                 print("--| Adicionar Produtos ao Carrinho |--")
                                 produtos.ListarProdutos()
-                                produto = int(
-                                    input(
-                                        "Digite o numero do produto que deseja adicionar ao carrinho: "
-                                    )
-                                )
+                                produto = int(input("Digite o numero do produto que deseja adicionar ao carrinho: "))
                                 produtos.AddCarrinho(produto)
                                 pausar()
                             case 3:
@@ -225,11 +209,7 @@ def main():
                                 limpar()
                                 print("--| Excluir do Carrinho |--")
                                 produtos.ListCarrinho()
-                                produto = int(
-                                    input(
-                                        "Digite o numero do produto que deseja remover do carrinho: "
-                                    )
-                                )
+                                produto = int(input("Digite o numero do produto que deseja remover do carrinho: "))
                                 produtos.RemCarrinho(produto)
                                 pausar()
                             case 5:

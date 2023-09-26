@@ -59,9 +59,7 @@ class Produtos:
     def ListCarrinho(self):
         i = 0
         for i in range(len(self.listacarrinho)):
-            print(
-                f" Produto: {self.listacarrinho.index(self.listacarrinho[i])}  |  Nome: {self.listacarrinho[i]}   |  Valor: {self.listacarrinhopreco[i]}"
-            )
+            print(f" Produto: {self.listacarrinho.index(self.listacarrinho[i])}  |  Nome: {self.listacarrinho[i]}   |  Valor: {self.listacarrinhopreco[i]}")
             i += 1
 
     def RemCarrinho(self, vetor):
@@ -90,9 +88,7 @@ class Produtos:
     def ListarHistorico(self):
         i = 0
         for i in range(len(self.historicoProduto)):
-            print(
-                f" Numero do pedido: {self.historicoNpedido[i]}  |  Produtos: {self.listacarrinho}  |  Valor: {self.listacarrinhopreco}"
-            )
+            print(f" Numero do pedido: {self.historicoNpedido[i]}  |  Produtos: {self.listacarrinho}  |  Valor: {self.listacarrinhopreco}")
             i += 1
 
 
@@ -116,9 +112,7 @@ class Adm:
     def listarAdm(self):
         i = 0
         for i in range(len(self.adms)):
-            print(
-                f" Index: {i}  |  Nome: {self.adms[i]}  |  Senha: {self.admsSenha[i]}"
-            )
+            print(f" Index: {i}  |  Nome: {self.adms[i]}  |  Senha: {self.admsSenha[i]}")
             i += 1
 
     def delAdm(self, adm):
