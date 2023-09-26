@@ -118,13 +118,6 @@ class Adm:
         if adm >= len(self.adms):
             print("Não existe esse adm")
 
-    def DelCliente(self, cliente):
-        del self.clientes[cliente]
-        del self.clienteSenha[cliente]
-        if cliente >= len(self.clientes):
-            print("Não existe esse cliente")
-        else:
-            print("Cliente removido com sucesso")
 
 
 class Cliente(Produtos):
@@ -149,3 +142,11 @@ class Cliente(Produtos):
             return True
         else:
             return False
+
+    def DelCliente(self, cliente):
+        del self.clientes[cliente]
+        del self.clienteSenha[cliente]
+        if cliente >= len(self.clientes):
+            print("Não existe esse cliente")
+        else:
+            print("Cliente removido com sucesso")

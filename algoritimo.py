@@ -145,7 +145,7 @@ def main():
                                     print("--| Remover Cliente |--")
                                     cliente.listar_Clientes()
                                     clienterem = int((input("Digite o numero do cliente que deseja remover: ")))
-                                    adm.DelCliente(clienterem)
+                                    cliente.DelCliente(clienterem)
 
                                 case 6:
                                     limpar()
