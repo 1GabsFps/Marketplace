@@ -21,16 +21,22 @@ class Loja:
 class Produtos:
     def __init__(self):
         self.produtos = []
-        self.descs =[]
-        self.preco =[]
+        self.descs = []
+        self.preco = []
         self.listacarrinho = []
         self.listacarrinhopreco = []
         self.descs = []
+        self.listacarrinho = []
+        self.historicoNome = []
+        self.historicoProduto = []
+        self.historicoValor = []
+        self.somacarrinho = []
+        self.historicoNpedido = []
+
     def AddProduto(self, nome, desc, valor):
         self.produtos.append(nome)
         self.preco.append(valor)
         self.descs.append(desc)
-
 
     def ListarProdutos(self):
         i = 0
@@ -49,7 +55,7 @@ class Produtos:
         self.listacarrinho.append(self.produtos[produto])
         self.listacarrinhopreco.append(self.preco[produto])
         print("Produto adicionado com sucesso")
-    
+
     def ListCarrinho(self):
         i = 0
         for i in range(len(self.listacarrinho)):
@@ -65,9 +71,30 @@ class Produtos:
             print("Não existe esse produto")
         else:
             print("Produto removido com sucesso")
+
     def SomaCarrinho(self):
         self.somacarrinho = sum(self.listacarrinhopreco)
         print(f"Valor total do carrinho: {self.somacarrinho}")
+
+    def HistoricoCompra(self, Npedido):
+        self.historicoProduto.append(self.listacarrinho)
+        self.historicoNpedido.append(Npedido)
+        i = 0
+        for i in range(len(self.listacarrinho)):
+            self.historicoValor.append(self.listacarrinhopreco[i])
+            i += 1
+
+    def TotalHistorico(self):
+        print(f" O valor total vendido em sua loja foi de: {sum(self.historicoValor)}")
+
+    def ListarHistorico(self):
+        i = 0
+        for i in range(len(self.historicoProduto)):
+            print(
+                f" Numero do pedido: {self.historicoNpedido[i]}  |  Produtos: {self.listacarrinho}  |  Valor: {self.listacarrinhopreco}"
+            )
+            i += 1
+
 
 class Adm:
     def cadAdm(self, nome, senha):
@@ -89,7 +116,9 @@ class Adm:
     def listarAdm(self):
         i = 0
         for i in range(len(self.adms)):
-            print(f" Index: {i}  |  Nome: {self.adms[i]}  |  Senha: {self.admsSenha[i]}")
+            print(
+                f" Index: {i}  |  Nome: {self.adms[i]}  |  Senha: {self.admsSenha[i]}"
+            )
             i += 1
 
     def delAdm(self, adm):
@@ -114,6 +143,7 @@ class Cliente(Produtos):
     def __init__(self):
         self.clientes = []
         self.clienteSenha = []
+
     def add_Cliente(self, nome, senha):
         self.nome = nome
         self.senha = senha
@@ -131,29 +161,3 @@ class Cliente(Produtos):
             return True
         else:
             return False
-
-
-
-class Checkout(Produtos):
-    def __init__(self):
-            self.listacarrinho = []
-            self.historicoNome = []
-            self.historicoProduto = []
-            self.historicoValor = []
-            self.somacarrinho = []
-            self.historicoNpedido = []
-    def HistoricoCompra(self, Npedido):
-        self.historicoProduto.append(self.listacarrinho)
-        self.historicoNpedido.append(Npedido)
-        i = 0
-        for i in range(len(self.listacarrinho)):
-            self.historicoValor.append(self.listacarrinhopreco[i])
-            i += 1
-    def TotalHistorico(self):
-        print(f" O valor total vendido em sua loja foi de: {sum(self.historicoValor)}")
-
-    def ListarHistorico(self):
-        i = 0
-        for i in range(len(self.historicoProduto)):
-            print(f" Numero do pedido: {self.historicoNpedido[i]}  |  Produtos: {self.listacarrinho}  |  Valor: {self.listacarrinhopreco}")
-            i += 1
