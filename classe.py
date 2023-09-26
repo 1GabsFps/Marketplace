@@ -41,9 +41,7 @@ class Produtos:
     def ListarProdutos(self):
         i = 0
         for i in range(len(self.produtos)):
-            print(
-                f" Produto: {self.produtos.index(self.produtos[i])}  |  Nome: {self.produtos[i]}  |  Desc: {self.descs[i]}  |  Valor: {self.preco[i]}"
-            )
+            print(f" Produto: {self.produtos.index(self.produtos[i])}  |  Nome: {self.produtos[i]}  |  Desc: {self.descs[i]}  |  Valor: {self.preco[i]}")
             i += 1
 
     def RemProdutos(self, produto):
@@ -94,11 +92,9 @@ class Produtos:
 
 class Adm:
     def cadAdm(self, nome, senha):
-        self.adms = [
-        ]
+        self.adms = []
         self.adms.append(nome)
-        self.admsSenha = [
-        ]
+        self.admsSenha = []
         self.admsSenha.append(senha)
 
     def verifyAdm(self, nome, senha):
@@ -143,10 +139,10 @@ class Cliente(Produtos):
         self.clienteSenha.append(senha)
 
     def listar_Clientes(self):
-        self.cont = 0
-        for cliente in self.clientes:
-            self.cont += 1
-            print(f"Nome: {cliente.getNome()}  |  Senha: {cliente.getSenha()}")
+        i = 0
+        for i in range(len(self.clientes)):
+            print(f"Index: {i}  |  Nome: {self.clientes[i]}  |  Senha: {self.clienteSenha[i]}")
+            i += 1
 
     def logar_Cliente(self, nome, senha):
         if nome in self.clientes and senha in self.clienteSenha:
