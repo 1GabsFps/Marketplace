@@ -13,7 +13,7 @@
 </tr>
 </table>
 
-## Especificações do Software de Compra e Venda em Python Orientado a Objeto
+## Especificações do Software de Compra e Venda em Python Orientado a Objeto 
 
 O software foi projetado com o objetivo de oferecer um ambiente de E-Commerce eletrônico onde clientes podem se cadastrar, fazer login, visualizar produtos, adicionar itens ao carrinho e realizar compras. Além disso, há funcionalidades específicas para administradores, como gerenciar clientes, produtos e perfis de administrador.
 Ele devera ser feito com base nos fundamentos de `associação, agregação e composição` em Python Orientado a Objeto
@@ -24,7 +24,7 @@ Ele devera ser feito com base nos fundamentos de `associação, agregação e co
 
 - **Sair**: Essa função permite que o usuário saia do software, encerrando a sessão e fechando o programa.
 
-_Observação_: O perfil do administrador já estará previamente definido no sistema, permitindo o acesso com as informações de login cadastradas como root, o cliente devera fazer seu cadastro com a ajuda de um dos adiministradores presentes na loja.
+_`Observação:`_ O perfil do administrador já estará previamente definido no sistema, permitindo o acesso com as informações de login cadastradas como root, o cliente devera fazer seu cadastro com a ajuda de um dos adiministradores presentes na loja.
 
 ## Tela de Login do Cliente
 
@@ -68,7 +68,7 @@ _Observação_: O perfil do administrador já estará previamente definido no si
 
 - **Voltar**: Permite ao administrador retornar à tela inicial, efetuando o logout do perfil de administrador atual.
 
-_Observação_: O usuario inicial root ja estará pre-definido no sistema e não podera ser excluido, para acessalo o nome do usuario e sua senha serão root.
+_`Observação:`_ O usuario inicial root ja estará pre-definido no sistema e não podera ser excluido, para acessalo o nome do usuario e sua senha serão root.
 
 Este documento descreve as funcionalidades principais do software de compra e venda em Python Orientado a Objeto.
 
@@ -93,17 +93,17 @@ Este documento descreve as funcionalidades principais do software de compra e ve
 * Métodos como AddProduto, ListarProdutos, RemProdutos, AddCarrinho, ListCarrinho, RemCarrinho, SomaCarrinho, HistoricoCompra, TotalHistorico e       ListarHistorico permitem a gestão de produtos, carrinho de compras e histórico de compras.
 * Ela também calcula o valor total do carrinho e mantém o histórico de vendas da loja.
 
-_Funções da classe_
-* AddProduto: Adiciona um novo produto.
-* ListarProdutos: Lista os produtos.
-* RemProdutos: Remove um produto.
-* AddCarrinho: Adiciona um produto ao carrinho.
-* ListCarrinho: Lista os produtos do carrinho.
-* RemCarrinho: Remove um produto do carrinho.
-* SomaCarrinho: Calcula o valor total do carrinho.
-* HistoricoCompra: Adiciona um produto ao histórico de compras.
-* TotalHistorico: Calcula o valor total do histórico de compras.
-* ListarHistorico: Lista o histórico de compras.
+_`Funções da classe:`_
+* `AddProduto:` Adiciona um novo produto.
+* `ListarProdutos:` Lista os produtos.
+* `RemProdutos:` Remove um produto.
+* `AddCarrinho:` Adiciona um produto ao carrinho.
+* `ListCarrinho:` Lista os produtos do carrinho.
+* `RemCarrinho:` Remove um produto do carrinho.
+* `SomaCarrinho:` Calcula o valor total do carrinho.
+* `HistoricoCompra:` Adiciona um produto ao histórico de compras.
+* `TotalHistorico:` Calcula o valor total do histórico de compras.
+* `ListarHistorico:` Lista o histórico de compras.
 
 
 **Classe Adm**: 
@@ -113,11 +113,11 @@ _Funções da classe_
 * O método verifyAdm verifica se um administrador com um determinado nome e senha existe.
 * O método listarAdm lista os administradores e o método delAdm permite remover administradores (exceto o "root").
 
-_Funções da classe_
-* cadAdm: Adiciona um novo administrador.
-* verifyAdm: Verifica se um administrador existe.
-* listarAdm: Lista os administradores.
-* delAdm: Remove um administrador.
+_`Funções da classe:`_
+* `cadAdm:` Adiciona um novo administrador.
+* `verifyAdm:` Verifica se um administrador existe.
+* `listarAdm:` Lista os administradores.
+* `delAdm:` Remove um administrador.
 
 
 **Classe Cliente**: 
@@ -125,11 +125,11 @@ _Funções da classe_
 * Ela herda funcionalidades relacionadas a produtos da classe Produtos.
 * Permite adicionar clientes, listar clientes, verificar credenciais de login e excluir clientes.
 
-_Funções da classe_
-* add_Cliente: Adiciona um novo cliente.
-* listar_Cliente: Lista os clientes.
-* logar_Cliente: Verifica se um cliente existe, e realiza o login deste cliente.
-* delCliente: Remove um cliente.
+_`Funções da classe:`_
+* `add_Cliente:` Adiciona um novo cliente.
+* `listar_Cliente:` Lista os clientes.
+* `logar_Cliente:` Verifica se um cliente existe, e realiza o login deste cliente.
+* `delCliente:` Remove um cliente.
 
 
 ## Autores
