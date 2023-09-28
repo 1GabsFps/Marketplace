@@ -93,7 +93,7 @@ Este documento descreve as funcionalidades principais do software de compra e ve
 * Métodos como AddProduto, ListarProdutos, RemProdutos, AddCarrinho, ListCarrinho, RemCarrinho, SomaCarrinho, HistoricoCompra, TotalHistorico e       ListarHistorico permitem a gestão de produtos, carrinho de compras e histórico de compras.
 * Ela também calcula o valor total do carrinho e mantém o histórico de vendas da loja.
 
-_Funçoes da classe_
+_Funções da classe_
 * AddProduto: Adiciona um novo produto.
 * ListarProdutos: Lista os produtos.
 * RemProdutos: Remove um produto.
@@ -113,7 +113,7 @@ _Funçoes da classe_
 * O método verifyAdm verifica se um administrador com um determinado nome e senha existe.
 * O método listarAdm lista os administradores e o método delAdm permite remover administradores (exceto o "root").
 
-_Funçoes da classe_
+_Funções da classe_
 * cadAdm: Adiciona um novo administrador.
 * verifyAdm: Verifica se um administrador existe.
 * listarAdm: Lista os administradores.
@@ -125,7 +125,7 @@ _Funçoes da classe_
 * Ela herda funcionalidades relacionadas a produtos da classe Produtos.
 * Permite adicionar clientes, listar clientes, verificar credenciais de login e excluir clientes.
 
-_Funçoes da classe_
+_Funções da classe_
 * add_Cliente: Adiciona um novo cliente.
 * listar_Cliente: Lista os clientes.
 * logar_Cliente: Verifica se um cliente existe, e realiza o login deste cliente.
