@@ -26,7 +26,7 @@ Ele devera ser feito ccom base nos fundamentos de `associação, agregação e c
 
 - **Sair**: Essa função permite que o usuário saia do software, encerrando a sessão e fechando o programa.
 
-_Observação_: O perfil do administrador já estará previamente definido no sistema, permitindo o acesso com as informações de login cadastradas previamente.
+_Observação_: O perfil do administrador já estará previamente definido no sistema, permitindo o acesso com as informações de login cadastradas como root.
 
 ## Tela de Login do Cliente
 
@@ -58,7 +58,17 @@ _Observação_: O perfil do administrador já estará previamente definido no si
 
 - **Voltar**: Permite ao administrador retornar à tela inicial, efetuando o logout do perfil de administrador atual.
 
+_Observação_: O usuario inicial root ja estará pre-definido no sistema e não podera ser excluido, para acessalo o nome do usuario e sua senha serão root.
+
 Este documento descreve as funcionalidades principais do software de compra e venda em Python Orientado a Objeto.
+
+## Bibliotecas usadas
+
+**os system**: Ela permite que o programa interaja com o sistema operacional, fornecendo uma maneira de executar comandos do sistema, como limpar a tela, e pausar o programa.
+
+**random**: Ela permite que o programa gere números aleatórios.
+
+**String**: Ela permite que o programa gere strings aleatórias.
 
 ## Explicação das classes
 
@@ -98,7 +108,6 @@ _Funçoes da classe_
 * verifyAdm: Verifica se um administrador existe.
 * listarAdm: Lista os administradores.
 * delAdm: Remove um administrador.
-* __str__: Retorna uma string com informações sobre o administrador.
 
 
 **Classe Cliente**: 
@@ -107,9 +116,9 @@ _Funçoes da classe_
 * Permite adicionar clientes, listar clientes, verificar credenciais de login e excluir clientes.
 
 _Funçoes da classe_
-* cadCliente: Adiciona um novo cliente.
-* listarCliente: Lista os clientes.
-* verifyCliente: Verifica se um cliente existe.
+* add_Cliente: Adiciona um novo cliente.
+* listar_Cliente: Lista os clientes.
+* logar_Cliente: Verifica se um cliente existe, e realiza o login deste cliente.
 * delCliente: Remove um cliente.
 
 
