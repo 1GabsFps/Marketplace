@@ -8,7 +8,7 @@
         </a>
     </td>
     <td align="center">
-        <img src="https://img.shields.io/static/v1?label=STATUS&message=%20EM DESENVOLVIMENTO&color=blue&style=for-the-badge&logo=REACT"/>
+        <img src="https://img.shields.io/static/v1?label=STATUS&message=%20Finalizado&color=blue&style=for-the-badge&logo=REACT"/>
     </td>
 </tr>
 </table>
@@ -16,7 +16,7 @@
 ## Especificações do Software de Compra e Venda em Python Orientado a Objeto
 
 O software foi projetado com o objetivo de oferecer um ambiente de E-Comercy eletrônico onde clientes podem se cadastrar, fazer login, visualizar produtos, adicionar itens ao carrinho e realizar compras. Além disso, há funcionalidades específicas para administradores, como gerenciar clientes, produtos e perfis de administrador.
-Ele devera ser feito base nos fundamentos de `associação, agregação e composição` em Python Orientado a Objeto
+Ele devera ser feito ccom base nos fundamentos de `associação, agregação e composição` em Python Orientado a Objeto
 
 ## Tela Inicial
 
@@ -59,6 +59,59 @@ _Observação_: O perfil do administrador já estará previamente definido no si
 - **Voltar**: Permite ao administrador retornar à tela inicial, efetuando o logout do perfil de administrador atual.
 
 Este documento descreve as funcionalidades principais do software de compra e venda em Python Orientado a Objeto.
+
+## Explicação das classes
+
+**Classe Loja**: 
+* A classe Loja representa informações sobre uma loja, como nome, endereço e CNPJ.
+* Ela possui um construtor __init__ para inicializar essas informações.
+
+
+**Classe Produto**: 
+* A classe Produtos representa os produtos disponíveis na loja.
+* Ela possui várias listas para armazenar informações sobre os produtos, carrinho de compras e histórico de compras.
+* Métodos como AddProduto, ListarProdutos, RemProdutos, AddCarrinho, ListCarrinho, RemCarrinho, SomaCarrinho, HistoricoCompra, TotalHistorico e       ListarHistorico permitem a gestão de produtos, carrinho de compras e histórico de compras.
+* Ela também calcula o valor total do carrinho e mantém o histórico de vendas da loja.
+
+_Funçoes da classe_
+* AddProduto: Adiciona um novo produto.
+* ListarProdutos: Lista os produtos.
+* RemProdutos: Remove um produto.
+* AddCarrinho: Adiciona um produto ao carrinho.
+* ListCarrinho: Lista os produtos do carrinho.
+* RemCarrinho: Remove um produto do carrinho.
+* SomaCarrinho: Calcula o valor total do carrinho.
+* HistoricoCompra: Adiciona um produto ao histórico de compras.
+* TotalHistorico: Calcula o valor total do histórico de compras.
+* ListarHistorico: Lista o histórico de compras.
+
+
+**Classe Adm**: 
+* A classe Adm representa administradores da loja.
+* Ela permite adicionar administradores, verificar credenciais e listar administradores.
+* Administradores adicionais podem ser adicionados usando o método cadAdm.
+* O método verifyAdm verifica se um administrador com um determinado nome e senha existe.
+* O método listarAdm lista os administradores e o método delAdm permite remover administradores (exceto o "root").
+
+_Funçoes da classe_
+* cadAdm: Adiciona um novo administrador.
+* verifyAdm: Verifica se um administrador existe.
+* listarAdm: Lista os administradores.
+* delAdm: Remove um administrador.
+* __str__: Retorna uma string com informações sobre o administrador.
+
+
+**Classe Cliente**: 
+* A classe Cliente representa os clientes da loja.
+* Ela herda funcionalidades relacionadas a produtos da classe Produtos.
+* Permite adicionar clientes, listar clientes, verificar credenciais de login e excluir clientes.
+
+_Funçoes da classe_
+* cadCliente: Adiciona um novo cliente.
+* listarCliente: Lista os clientes.
+* verifyCliente: Verifica se um cliente existe.
+* delCliente: Remove um cliente.
+
 
 ## Autores
 
