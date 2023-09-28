@@ -20,13 +20,11 @@ Ele devera ser feito ccom base nos fundamentos de `associação, agregação e c
 
 ## Tela Inicial
 
-- **Cadastro**: Esta opção permite que novos clientes se cadastrem no sistema. Durante o cadastro, informações pessoais serão coletadas e armazenadas para uso futuro.
-
-- **Login**: Os clientes podem efetuar login utilizando as informações fornecidas durante o cadastro. Isso dará acesso ao seu perfil e às funcionalidades relacionadas.
+- **Login**: Os clientes e os Adms podem efetuar login utilizando as informações fornecidas durante o cadastro. Isso dará acesso ao seu perfil e às funcionalidades relacionadas.
 
 - **Sair**: Essa função permite que o usuário saia do software, encerrando a sessão e fechando o programa.
 
-_Observação_: O perfil do administrador já estará previamente definido no sistema, permitindo o acesso com as informações de login cadastradas como root.
+_Observação_: O perfil do administrador já estará previamente definido no sistema, permitindo o acesso com as informações de login cadastradas como root, o cliente devera fazer seu cadastro com a ajuda de um dos adiministradores presentes na loja.
 
 ## Tela de Login do Cliente
 
