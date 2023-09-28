@@ -15,7 +15,7 @@
 
 ## Especificações do Software de Compra e Venda em Python Orientado a Objeto
 
-O software foi projetado com o objetivo de oferecer um ambiente de E-Comercy eletrônico onde clientes podem se cadastrar, fazer login, visualizar produtos, adicionar itens ao carrinho e realizar compras. Além disso, há funcionalidades específicas para administradores, como gerenciar clientes, produtos e perfis de administrador.
+O software foi projetado com o objetivo de oferecer um ambiente de E-Commerce eletrônico onde clientes podem se cadastrar, fazer login, visualizar produtos, adicionar itens ao carrinho e realizar compras. Além disso, há funcionalidades específicas para administradores, como gerenciar clientes, produtos e perfis de administrador.
 Ele devera ser feito com base nos fundamentos de `associação, agregação e composição` em Python Orientado a Objeto
 
 ## Tela Inicial
