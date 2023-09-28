@@ -36,6 +36,12 @@ _Observação_: O perfil do administrador já estará previamente definido no si
 
 - **Ver Carrinho**: Ao optar por essa funcionalidade, o cliente poderá visualizar todos os produtos que foram adicionados ao seu carrinho durante a sessão de compra.
 
+- **Excluir do Carrinho**: Esta função permite ao cliente remover produtos presentes no carrinho.
+
+- **Checkout**: Esta opção mostra ao cliente seus produtos que foram adicionados ao carrinho e a soma do valor destes produtos durante a sessão da compra.
+
+- **Pagar**: Ao selecionar esta opção, o cliente poderá finalizar sua compra, efetuando o pagamento dos produtos presentes no carrinho. Após a conclusão da compra, os produtos serão removidos do carrinho e adicionados ao histórico de compras do cliente.
+
 - **Voltar**: Esta opção permite ao cliente retornar à tela inicial, efetuando o logout da sua sessão atual.
 
 ## Tela de Login do Administrador
@@ -48,6 +54,8 @@ _Observação_: O perfil do administrador já estará previamente definido no si
 
 - **Excluir Produtos**: Essa função possibilita a exclusão de produtos previamente cadastrados na loja.
 
+- **Excluir Clientes**: O administrador pode remover perfis de clientes específicos, se necessário.
+
 - **Excluir Administradores**: O administrador pode remover perfis de administradores específicos, se necessário.
 
 - **Listar Produtos**: Exibe uma lista de todos os produtos atualmente disponíveis na loja.
@@ -55,6 +63,10 @@ _Observação_: O perfil do administrador já estará previamente definido no si
 - **Listar Clientes**: Mostra uma lista de todos os clientes registrados no sistema da loja.
 
 - **Listar Administradores**: Exibe uma lista de todos os perfis de administradores cadastrados na loja.
+
+- **Listar Histórico de Compras**: Esta opção permite que os administradores visualizem o histórico de compras de todos os clientes da loja.
+
+- **Lista o Histórico de Comparas Geral**: Esta Opção permite que os administradores visualizem o histórico de compras geral da loja.
 
 - **Voltar**: Permite ao administrador retornar à tela inicial, efetuando o logout do perfil de administrador atual.
 
@@ -64,11 +76,11 @@ Este documento descreve as funcionalidades principais do software de compra e ve
 
 ## Bibliotecas usadas
 
-**os system**: Ela permite que o programa interaja com o sistema operacional, fornecendo uma maneira de executar comandos do sistema, como limpar a tela, e pausar o programa.
+- **os system**: Ela permite que o programa interaja com o sistema operacional, fornecendo uma maneira de executar comandos do sistema, como limpar a tela, e pausar o programa.
 
-**random**: Ela permite que o programa gere números aleatórios.
+- **random**: Ela permite que o programa gere números aleatórios.
 
-**String**: Ela permite que o programa gere strings aleatórias.
+- **String**: Ela permite que o programa gere strings aleatórias.
 
 ## Explicação das classes
 
